@@ -4,18 +4,18 @@ include("db.php");
 if (isset($_POST['submit'])) {
     $title = $_POST['title'];
     $author = $_POST['author'];
-    $year = $_POST['description'];
+    $description = $_POST['description'];
     $pdf_name = $_FILES['file']['name'];
     $pdf_type = $_FILES['file']['type'];
     $pdf_size = $_FILES['file']['size'];
     $pdf_temp_loc = $_FILES['file']['tmp_name'];
     $pdf_store = "pdf/" . $pdf_name;
+    $dept = $_POST['dept'];
+    $batch = $_POST['batch'];
 
-    $sql = "INSERT INTO storage (file,title, author, description) VALUES ('$pdf_name','$title', '$author', '$year')";
+    $sql = "INSERT INTO storage (file, title, author, description, dept, batch) VALUES ('$pdf_name', '$title', '$author', '$description', '$dept', '$batch')";
     $result = mysqli_query($conn, $sql);
-
 }
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -46,7 +46,7 @@ if (isset($_POST['submit'])) {
             </ul>
         </nav>
     </header>
-    <main style="padding= 0 10px">
+    <main>
         <form action="upload.php" method="POST" enctype="multipart/form-data">
             <h2>Upload your thesis paper in PDF format</h2>
 
@@ -59,10 +59,17 @@ if (isset($_POST['submit'])) {
                 <input type="text" name="author" id="author">
             </div>
             <div class="form-row">
-                <label for="description">Abstract:</label>
-                <textarea name="description" id="description" class="tex"></textarea>
+                <label for="dept">Department:</label>
+                <input type="text" name="dept" id="dept">
+            
+                <label for="batch">Batch:</label>
+                <input type="text" name="batch" id="batch">
             </div>
-            <div>
+            <div class="form-row">
+                <label for="description">Abstract:</label>
+                <textarea name="description" id="description"></textarea>
+            </div>
+            <div class="form-row">
                 <input type="file" name="file" id="file">
             </div>
             <div>

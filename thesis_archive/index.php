@@ -20,7 +20,7 @@
         <li class="active"><a href="#">Home</a></li>
         <li><a href="browse.php">Browse</a></li>
         <li><a href="upload.php">Upload</a></li>
-        <li><a href="#">About</a></li>
+        <li><a href="about.html">About</a></li>
 
       </ul>
     </nav>
@@ -64,28 +64,27 @@
 
   </main>
   <footer>
-    <div class="footer-content">
-      <ul class="footer-social-icons">
-        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-      </ul>
+  <div class="footer-content">
+    <div class="footer-info">
+      <span>Contact us: example@example.com</span>
+      <br>
+      <span>Phone: 01782535335</span>
+    </div>
+    <div id="map">
+      <!-- Your map content here -->
+    </div>
+    <ul class="footer-social-icons">
+      <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+      <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+      <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+    </ul>
+  </div>
+  <div class="footer-credits">
+    &copy; 2023 Thesis Archive. All rights reserved.
+  </div>
+</footer>
 
-      <div class="footer-info">
-        <span>Contact us: example@example.com</span>
-        <br>
-        <span>Phone: 01782535335</span>
-      </div>
-      <div id="map">
-        <!-- <i class="fas fa-map-marked-alt"></i> -->
-      </div>
-    </div>
-    <div class="footer-credits">
-      &copy; 2023 Thesis Archive. All rights reserved.
-    </div>
-    <!-- java script -->
-    <!-- <script src="script.js"></script> -->
-  </footer>
+
 
 
   <script>(g => { var h, a, k, p = "The Google Maps JavaScript API", c = "google", l = "importLibrary", q = "__ib__", m = document, b = window; b = b[c] || (b[c] = {}); var d = b.maps || (b.maps = {}), r = new Set, e = new URLSearchParams, u = () => h || (h = new Promise(async (f, n) => { await (a = m.createElement("script")); e.set("libraries", [...r] + ""); for (k in g) e.set(k.replace(/[A-Z]/g, t => "_" + t[0].toLowerCase()), g[k]); e.set("callback", c + ".maps." + q); a.src = `https://maps.${c}apis.com/maps/api/js?` + e; d[q] = f; a.onerror = () => h = n(Error(p + " could not load.")); a.nonce = m.querySelector("script[nonce]")?.nonce || ""; m.head.append(a) })); d[l] ? console.warn(p + " only loads once. Ignoring:", g) : d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n)) })

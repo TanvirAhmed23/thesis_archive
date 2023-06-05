@@ -153,8 +153,8 @@ input[type="text"] {
   border-radius: 8px;
   padding: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
   transition: box-shadow 0.3s;
+  margin: 20px 40px;
 }
 
 .pdf-card:hover {
@@ -258,6 +258,25 @@ footer {
   font-size: 12px;
   color: #888;
 }
+
+.dropdown-btn {
+  background-color: #1c7bb9;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.pdf-description.abstract {
+  display: none;
+}
+/* .fas fa-download{
+  margin-top: 5px;
+} */
+
+
 
 
 
